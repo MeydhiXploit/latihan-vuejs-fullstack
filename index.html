@@ -11,7 +11,7 @@
 <body>
 
     <div id="app">
-        <img v-bind:src="image" alt="">
+        <img class="img-fluid" v-bind:src="image" v-bind:alt="name">
         <h3>{{ name }}</h3>
         <p>{{ description }}</p>
         <div class="h3">Rp {{ price }}</div>
