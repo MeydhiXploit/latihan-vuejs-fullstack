@@ -8,14 +8,14 @@
 </head>
 <body>
     <div class="container" id="app">
-        <div class="row d-flex mb-3 align-items-center">
+        <div class="row d-flex mb-3 align-items-center" v-for="item in products">
             <div class="col-sm-4">
-                <img class="img-fluid" v-bind:src="image" v-bind:alt="name">
+                <img class="img-fluid" v-bind:src="item.image" v-bind:alt="item.name">
             </div>
             <div class="col">
-                <h3>{{ name }}</h3>
-                <p>{{ description }}</p>
-                <div class="h5 float-right">Rp {{ price }}</div>
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.description }}</p>
+                <div class="h5 float-left">Rp {{ item.price }}</div>
             </div>
         </div>
     </div>
