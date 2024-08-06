@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="container" id="app">
-        <div class="row d-flex mb-3 align-items-center" v-for="item in products">
-            <div class="col-sm-4">
+        <div v-for="item in products">
+            <div class="col-sm-4 d-flex justify-content-center align-items-center full-height">
                 <img class="img-fluid" v-bind:src="item.image" v-bind:alt="item.name">
             </div>
             <div class="col">
