@@ -8,14 +8,16 @@
 </head>
 <body>
     <div class="container" id="app">
-        <div v-for="item in products" v-if="item.price <= Number(maximum)">
-            <div class="col-sm-4 d-flex justify-content-center align-items-center full-height">
-                <img class="img-fluid" v-bind:src="item.image" v-bind:alt="item.name">
-            </div>
-            <div class="col">
-                <h3>{{ item.name }}</h3>
-                <p>{{ item.description }}</p>
-                <div class="h5 float-left">Rp {{ item.price }}</div>
+        <div v-for="item in products">
+            <div v-if="item.price <= Number(maximum)">
+                <div class="col-sm-4 d-flex justify-content-center align-items-center full-height">
+                    <img class="img-fluid" v-bind:src="item.image" v-bind:alt="item.name">
+                </div>
+                <div class="col">
+                    <h3>{{ item.name }}</h3>
+                    <p>{{ item.description }}</p>
+                    <div class="h5 float-left">Rp {{ item.price }}</div>
+                </div>
             </div>
         </div>
     </div>
