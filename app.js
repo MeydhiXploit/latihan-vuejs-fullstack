@@ -24,9 +24,20 @@ var dataProduct = {
             "image_title": "cool",
             "image": "https://www.coldwear.com.sg/image/cache/product/product-72679/10115__Joel__1666174307_MWS020037_BLU_2-272x408.jpg",
         },
+        {
+            
+            "id": "460",
+            "name": "adidas",
+            "description": "adidas logo",
+            "price": "24.99",
+            "image_title": "adidas",
+            "image": "./img/adidas.png",
+            
+        }
 
     ]
 };
+
 var app = new Vue({
     el: '#app',
     data: dataProduct
