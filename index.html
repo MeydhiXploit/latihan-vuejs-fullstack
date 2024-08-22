@@ -23,7 +23,7 @@
         <div v-for="item in products">
             <div v-if="item.price <= Number(maximum)">
                 <div class="col-1 mr-auto">
-                    <button class="btn btn-info" v-on:click="cart.push(item)">+</button>
+                    <button class="btn btn-info" v-on:click="addItem(item)">+</button>
                 </div>
                 <div class="col-sm-4 d-flex justify-content-center align-items-center full-height">
                     <img class="img-fluid" v-bind:src="item.image" v-bind:alt="item.name">

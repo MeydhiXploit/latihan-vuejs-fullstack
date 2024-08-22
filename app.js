@@ -2,7 +2,9 @@ var app = new Vue({
     el: '#app',
     data: {
         maximum:50,
+        //nilai dari variabel products kosong 
         products: null,
+        // nilai arraynya null
         cart: []
     },
     mounted: function(){
@@ -12,5 +14,11 @@ var app = new Vue({
             this.products = data;
         })
     )
+    },
+    //tanpa di tambahkan function karena methods ini bersifat properti
+    methods: {
+        addItem: function(products){
+            this.cart.push(products);
+        }
     }
 })
