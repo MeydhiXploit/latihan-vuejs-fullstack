@@ -19,6 +19,12 @@ var app = new Vue({
     methods: {
         addItem: function(products){
             this.cart.push(products);
+        },
+        removeItem: function (product) {
+            let index = this.cart.findIndex(item => item === product);
+            if (index !== -1) {
+                this.cart.splice(index, 1);
+            }
         }
     }
 })
