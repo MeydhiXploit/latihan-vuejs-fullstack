@@ -23,7 +23,7 @@
         <div v-for="item in products">
             <div v-if="item.price <= Number(maximum)">
                 <div class="col-1 d-flex justify-content-between">
-                    <button class="btn btn-info" v-on:click="addItem(item)">+</button><br>
+                    <button class="btn btn-info" v-on:click="addItem(item)">+</button><br>+
                     <button class="btn btn-danger ml-2" v-on:click="removeItem(item)">-</button>
                 </div>
                 <div class="col-sm-4 d-flex justify-content-center align-items-center full-height">
