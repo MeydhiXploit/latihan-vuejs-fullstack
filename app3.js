@@ -12,8 +12,6 @@ var data = {
             "price": "2.80",
             "image_title": "mineral-water-strawberyy_600px",
             "image": ""
-
-
         }
     ]
 }
