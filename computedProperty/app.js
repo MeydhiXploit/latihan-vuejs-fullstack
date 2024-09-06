@@ -8,7 +8,19 @@ var app = new Vue({
             return this.slugText
             .toLowerCase()
             .replace(/[^\w ]+/g,'')
-            .replace(/ +/g,'-');
+            .replace(/ +/g,'-') + '-' + this.now;
+        }
+    },
+    method:{
+        now: function(){
+            var date = new Date();
+            // melakukan nilai balik
+            return(
+                // kita akan mendapatkan get Hours
+                String(date.getHours()) +
+                String(date.getMinutes()) +
+                String(date.getSeconds()) 
+            );
         }
     }
 })
