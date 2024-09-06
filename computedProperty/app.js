@@ -4,9 +4,11 @@ var app = new Vue({
         slugText: 'The Quick #C*sdf Brown 29'
     },
     computed:{
-        slugtize: function(){
-            // fungsi kode ini menampilkan nilai balik dari slugText
+        slugetize: function(){
             return this.slugText
+            .toLowerCase()
+            .replace(/[^\w ]+/g,'')
+            .replace(/ +/g,'-');
         }
     }
 })
