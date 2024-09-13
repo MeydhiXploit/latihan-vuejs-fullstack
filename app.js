@@ -5,7 +5,10 @@ var app = new Vue({
         //nilai dari variabel products kosong 
         products: null,
         // nilai arraynya null
-        cart: []
+        cart: [],
+        style:{
+            label: ['font-weight-bold', 'mr-2']
+        }
     },
     mounted: function(){
         fetch('https://hplussport.com/api/products/order/price')
