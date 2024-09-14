@@ -4,23 +4,29 @@ var app = new Vue({
         slugText: 'The Quick #C*sdf Brown 29'
     },
     computed:{
+        // now: function(){
+        //     var date = new Date();
+        //     return(
+        //       String(date.getHours()) +
+        //       String(date.getMinutes()) +
+        //       String(date.getSeconds()) 
+        //     )
+        //   },
         slugetize: function(){
             return this.slugText
             .toLowerCase()
             .replace(/[^\w ]+/g,'')
-            .replace(/ +/g,'-') + '-' + this.now;
+            .replace(/ +/g,'-') + '-' + this.now();
         }
     },
-    method:{
+    methods:{
         now: function(){
-            var date = new Date();
-            // melakukan nilai balik
-            return(
-                // kita akan mendapatkan get Hours
-                String(date.getHours()) +
-                String(date.getMinutes()) +
-                String(date.getSeconds()) 
-            );
+          var date = new Date();
+          return(
+            String(date.getHours()) +
+            String(date.getMinutes()) +
+            String(date.getSeconds()) 
+          )
         }
     }
 })
